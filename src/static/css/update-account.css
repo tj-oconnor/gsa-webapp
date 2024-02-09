@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #cbeafd;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+form {
+    border: 2px solid #cbeafd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #111; /* Dark background color */
+    outline: none; /* Remove default outline */
+    width: 50%;
+    max-width: 500px;
+}
+
+label {
+    color: #cbeafd;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    background-color: #333; /* Darker background for input fields */
+    color: #cbeafd;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: #cbeafd;
+    color: #333;
+    padding: 20px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #a9d2e3;
+    color: #333;
+}
+
+.message {
+        color: red;
+        font-family: 'Orbitron', sans-serif;
+}
+
+.messages {
+    color: red;
+    font-family: 'Orbitron', sans-serif;  
+}

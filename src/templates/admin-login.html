@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <style>
+    /* Add custom CSS for admin login form here */
+    .admin-form {
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        padding: 20px;
+    }
+
+    .input-box {
+        border: 2px solid #cbeafd;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 10px;
+        width: 250px;
+        font-family: 'Orbitron', sans-serif;
+        color: #cbeafd;
+        background-color: #111; /* Dark background color */
+    }
+
+    .login-button {
+        background-color: #cbeafd;
+        color: #333;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 30px;
+        font-family: 'Orbitron', sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .message {
+        color: red;
+        font-family: 'Orbitron', sans-serif;
+    }
+</style>
+</head>
+<body>
+    <h1 id="app-title">Admin Login</h1>
+    <form class="admin-form" method="POST" action="/admin-login">
+        <input class="input-box" type="text" name="username" placeholder="Username" />
+        <input class="input-box" type="password" name="password" placeholder="Password" />
+        <button class="login-button" type="submit">Login</button>
+        <p class="message">{{ message }}</p>
+    </form>
+</body>
+</html>

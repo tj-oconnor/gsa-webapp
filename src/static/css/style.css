@@ -1,0 +1,147 @@
+body {
+    background-color: black;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app-title {
+    color: #cbeafd;
+     font-family: 'Orbitron', sans-serif;
+    font-size: 36px; /* Increase title font size */
+    margin-bottom: 15px;
+}
+
+#welcome {
+    color: #cbeafd;
+     font-family: 'Orbitron', sans-serif;
+    font-size: 20px; /* Increase title font size */
+    margin-bottom: 10px;    
+}
+
+#logo img {
+    width: 50%;
+    height: auto;
+    border: 4px solid #ccc; /* Light grey border */
+    border-radius: 10px;
+}
+
+#login-buttons {
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #cbeafd;
+    color: #333;
+    padding: 20px 40px; /* Increase button padding for larger buttons */
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #a9d2e3;
+    color: #333;
+}
+
+#radar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure radar is centered vertically */
+    flex: 1;
+    width: 70%;
+    height: 70%;
+}
+
+/* Add your existing styles here */
+
+#radar {
+    filter: grayscale(50%); /* Apply grayscale to radar image */
+    filter: brightness(20%)
+}
+
+#rocket {
+    position: absolute;
+    display: none;
+    filter: brightness(100%); /* Reset rocket's brightness to 100% */
+    position: absolute;
+    width: 60px; /* Adjust the size of the circle as needed */
+    height: 60px; /* Adjust the size of the circle as needed */
+    border: 2px solid #cbeafd;
+    border-radius: 50%; /* Make it a circle */
+    top: -1px; /* Position above the rocket */
+    left: -1px; /* Position to the left of the rocket */
+}
+
+#content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:75%;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 85%;
+}
+
+
+#radar-container {
+        align-items: center;
+     width: 100%;
+}
+
+#rocket-container {
+    flex: 1;
+    width: 100%;
+}
+
+#radar {
+    filter: grayscale(50%);
+    filter: brightness(20%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#text-container {
+    width: 35%;
+    padding: 20px;
+    border: 2px solid #cbeafd; /* Outline color */
+    border-radius: 10px;
+    background-color: black; /* Inside color */
+    outline: none; /* Remove default outline */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content at the top */
+    align-items: center;
+}
+
+#random-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    color: #cbeafd; /* Black color for text */
+}
+
+#legal-text {
+    width: 55%;
+    color: #cbeafd; /* Same color as other text */
+    font-size: 8px; /* Adjust the font size to make it really small */
+}
+
+
+
+

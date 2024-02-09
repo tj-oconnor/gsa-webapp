@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Diagnostics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/diag-style.css') }}">
+</head>
+<body>
+    <div class="diagnostics-container">
+        <h1 id="app-title">Rocket Diagnostics</h1>
+        <div class="progress-border">
+            <div class="progress-container">
+                <div class="progress-label">Remaining Fuel</div>
+                <div class="progress-bar">
+                    <div id="fuel-progress" class="progress" data-value="100">
+                        <div id="fuel-value" class="progress-value">100%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress-border">
+            <div class="progress-container">
+                <div class="progress-label">Average Velocity</div>
+                <div class="progress-bar">
+                    <div id="velocity-progress" class="progress" data-value="0">
+                        <div id="velocity-value" class="progress-value">0 mph</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress-border">
+            <div class="progress-container">
+                <div class="progress-label">Temperature in Space</div>
+                <div class="progress-bar">
+                    <div id="temperature-progress" class="progress" data-value="-450">
+                        <div id="temperature-value" class="progress-value">-450 °F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <form method="GET" action="/update-account">
+                <button id="update-account" class="button">Update Account</button>
+            </form>
+            <form method="GET" action="/update-service">
+            <button id="update-legacy-service" class="button">Update Service</button>
+            </form>
+        </div>
+    </div>
+    <div id="messages">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                    {% for message in messages %}
+                        <p class="message">{{ message }}</p>
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        {% if output %}
+            <p class="message">Service Update Response: {{ output }}</p>
+        {% endif %}
+    </div>
+    <!-- Include your custom JavaScript file -->
+    <script src="{{ url_for('static', filename='js/diagnostics.js') }}"></script>
+</body>
+</html>
+

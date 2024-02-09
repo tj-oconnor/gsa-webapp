@@ -1,0 +1,109 @@
+body {
+    background-color: black;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.diagnostics-container {
+    border: 2px solid #cbeafd; /* Rounded border color */
+    border-radius: 20px; /* Rounded border */
+    padding: 20px;
+}
+
+#app-title {
+    color: #cbeafd;
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.progress-border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Stack progress bars vertically */
+}
+
+.progress-container {
+    width: 100%; /* Full width for each progress container */
+    margin: 20px;
+    text-align: center;
+}
+
+.progress-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    color: #cbeafd;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #222; /* Dark background for progress bar */
+    border: 2px solid #cbeafd; /* Outline color */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 100%;
+    height: 30px;
+    background-color: #cbeafd; /* Progress bar color */
+    text-align: center;
+    line-height: 30px;
+    color: red; /* Text color on progress bar */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+
+.progress-value {
+    font-size: 12px;
+    color: red; /* Text color on progress bar */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.button-container {
+    margin-top: 30px;
+}
+
+.button {
+    background-color: #cbeafd;
+    color: #333;
+    padding: 20px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #a9d2e3;
+    color: #333;
+}
+
+.message {
+        color: #cbeafd;
+        font-family: 'Orbitron', sans-serif;
+}
+
+.messages {
+    color: #cbeafd;
+    font-family: 'Orbitron', sans-serif;  
+}
+
+

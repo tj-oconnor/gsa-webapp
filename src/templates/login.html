@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find My Rocket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add CSS to arrange buttons horizontally */
+        #login-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="app-title">Find My Rocket App</h1>
+    <div id="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+    </div>
+    <div id="login-buttons">
+        <form method="GET" action="/subscribe">
+            <button class="button" type="submit">Guest</button>
+        </form>
+        <form method="GET" action="/admin-login">
+            <button class="button" type="submit">Admin</button>
+        </form>
+    </div>
+</body>
+</html>

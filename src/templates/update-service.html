@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add your specific CSS styles for the Update Service page here */
+        /* For example, you can customize the appearance of the file upload form */
+        #update-service-form {
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid #cbeafd; /* Add border around the form */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        #update-service-form input[type="file"] {
+            display: none; /* Hide the default file input */
+        }
+
+        #update-service-form label {
+            background-color: #cbeafd;
+            color: #333;
+            padding: 15px 30px;
+            border: 2px solid #cbeafd; /* Add border around the "Choose File" button */
+            border-radius: 10px;
+            font-family: 'Orbitron', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin-bottom: 20px; /* Add margin to separate buttons */
+            display: block; /* Display the buttons as blocks (stacked vertically) */
+        }
+
+        #update-service-form label:hover {
+            background-color: #a9d2e3;
+            color: #333;
+        }
+
+        #update-service-form input[type="file"] + label {
+            border: none;
+        }
+
+        /* Style for the submit button */
+        #update-service-form input[type="submit"] {
+            background-color: #cbeafd;
+            color: #333;
+            padding: 15px 30px;
+            border: 2px solid #cbeafd; /* Add border around the "Upload and Update Service" button */
+            border-radius: 10px;
+            font-family: 'Orbitron', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 40px;
+            display: block; /* Display the button as a block (below the "Choose File" button) */
+        }
+
+        #update-service-form input[type="submit"]:hover {
+            background-color: #a9d2e3;
+            color: #333;
+        }
+
+        /* Style for the title */
+        #app-title {
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="app-title">Update Service</h1>
+    <div id="logo">
+        <img src="{{ url_for('static', filename='images/repair.png') }}" alt="Logo">
+    </div>
+    <div id="update-service-form">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".c" id="file-input">
+            <label for="file-input">Choose File</label>
+            <input type="submit" value="Upload and Update Service">
+        </form>
+    </div>
+    
+
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update-account.css') }}">
+    <!-- Include your other CSS files if needed -->
+</head>
+<body>
+    <h1>Update Account</h1>
+    <form method="POST" action="/update-account">
+        <label for="new-username">New Username:</label>
+        <input type="text" id="new-username" name="new_username" required><br>
+
+        <label for="new-password">New Password:</label>
+        <input type="password" id="new-password" name="new_password" required><br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm_password" required><br>
+
+        <button type="submit">Update Account</button>
+    </form>
+    <p class="message">{{ message }}</p>
+</body>
+</html>
